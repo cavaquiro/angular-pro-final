@@ -1,0 +1,12 @@
+<div class="meal">
+    <div class="meal__title">
+      <h1>
+        <app-icon [nameIcon]="'food'" [size]="24" ></app-icon>
+        <span>Create meal</span>
+      </h1>
+    </div>
+    <div>
+      <app-icon [nameIcon]="'add-white'" [size]="24"></app-icon>
+      <app-meal-form (create)="addMeal($event)"></app-meal-form>
+    </div>
+  </div>

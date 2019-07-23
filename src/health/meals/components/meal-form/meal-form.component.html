@@ -1,0 +1,24 @@
+<div class="meal-form">
+  <form [formGroup]="form">
+    <div class="meal-form__name">
+      <label>
+        <h3>Meal name</h3>
+        <input
+          type="text"
+          placeholder="e.g. English Breakfast"
+          formControlName="name"
+        />
+      </label>
+    </div>
+    <div class="meal-form__food">
+      <div class="meal-form__subtitle">
+        <h2>Food</h2>
+        <div class="meal-form__add">
+            <app-icon [nameIcon]="'add-white'" [size]="24"></app-icon>
+            Add food
+        </div>        
+      </div>
+    </div>
+  </form>
+  meal form
+</div>
