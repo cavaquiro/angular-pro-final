@@ -1,0 +1,9 @@
+<div class="app-header">
+  <div class="wrapper">
+    <app-icon [nameIcon]="'logo'" [size]="[155,50]"  ></app-icon>
+    <div class="app-header__user-info"
+         *ngIf="user?.authenticated">
+      <app-icon [class]="'logout-icon'" [nameIcon]="'logout'" [size]="24" (click)="logOutUser()"></app-icon>
+    </div>
+  </div>
+</div>

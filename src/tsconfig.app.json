@@ -1,0 +1,19 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "module": "es2015",
+    "types": [
+      "node"
+    ]/*,
+    "paths":{
+      "bz-genome-angular": ["src/app/bz-genome-angular/public_api.ts"]
+    }*/,"paths":{
+      "store": ["src/store.ts"]
+    }
+  },
+  "exclude": [
+    "src/test.ts",
+    "**/*.spec.ts"
+  ]
+}
