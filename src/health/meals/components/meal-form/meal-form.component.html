@@ -8,17 +8,34 @@
           placeholder="e.g. English Breakfast"
           formControlName="name"
         />
+        <div class="error" *ngIf="required">
+           Meal name is requiered
+        </div>
       </label>
     </div>
     <div class="meal-form__food">
       <div class="meal-form__subtitle">
-        <h2>Food</h2>
-        <div class="meal-form__add">
-            <app-icon [nameIcon]="'add-white'" [size]="24"></app-icon>
+        <h3>Food</h3>
+        <button type="button" class="meal-form__add" (click)="addIngrident()">
+            <app-icon nameIcon="add-white" [size]="24"></app-icon>
             Add food
-        </div>        
+        </button>        
+      </div>
+      <div formArrayName="ingredients">
+          <label *ngFor="let c of ingredients.controls; index as i;">
+              <input [formControlName]="i" placeholder="e.g. Eggs" >
+              <span class="meal-form__remove"
+              (click)="removeIngrident(i)"><app-icon [nameIcon]="'cross'" [size]="24"></app-icon></span>
+          </label>
+      </div>
+    </div>
+    <div class="meal-form__submit">
+      <div>
+          <button type="button" class="button" (click)="createMeal()">
+            Create meal
+          </button>
+          <a class="button button--cancel" [routerLink]="['../']">Cancel</a>
       </div>
     </div>
   </form>
-  meal form
 </div>
